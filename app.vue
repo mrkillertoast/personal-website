@@ -4,6 +4,7 @@
     <main class="flex-1">
       <Hero/>
       <Experience/>
+      <Skills/>
       <Projects/>
       <Contact/>
     </main>
@@ -12,4 +13,5 @@
 </template>
 <script setup lang="ts">
 import Header from "~/components/Header.vue";
+import Skills from "~/components/Skills.vue";
 </script>
