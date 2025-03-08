@@ -3,7 +3,9 @@
 </script>
 
 <template>
-test
+<section class="hero">
+  <Hero/>
+</section>
 </template>
 
 <style scoped>
