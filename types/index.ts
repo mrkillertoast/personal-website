@@ -1,1 +1,1 @@
-export * from './hero_button/interfaces'
+export * from "./hero";

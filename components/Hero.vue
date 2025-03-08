@@ -8,9 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { IResumeButton, IContactButton } from "~/types/index.ts";
-import { PropType } from "vue";
-
+import type { IHeroButton } from "~/types/hero/IHeroButton";
 // Sample portrait images for the slider
 const personalImages = [
   "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&h=750",
@@ -30,15 +28,15 @@ const props = defineProps({
   },
   description: {
     type: String,
-    required: true,
+    required: false,
   },
   resumeButton: {
-    type: Object as PropType<IResumeButton>,
-    required: true,
+    type: Object as PropType<IHeroButton>,
+    required: false,
   },
   contactButton: {
-    type: Object as PropType<IContactButton>,
-    required: true,
+    type: Object as PropType<IHeroButton>,
+    required: false,
   },
 });
 </script>
