@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-8 border-t">
+  <footer class="py-8 border-t sticky bottom-0">
     <div class="container">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
