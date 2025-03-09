@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { useAsyncData } from "#imports";
-import { Briefcase } from "lucide-vue-next";
+import { Briefcase, GraduationCap } from "lucide-vue-next";
 
 const { data: general } = await useAsyncData(() => queryCollection("general").first());
 const { data: workExperiences } = await useAsyncData(() => queryCollection("workExperience").all());
+const { data: educations } = await useAsyncData(() => queryCollection("education").all());
 
 </script>
 
@@ -28,7 +29,24 @@ const { data: workExperiences } = await useAsyncData(() => queryCollection("work
 
         <div class="space-y-12">
           <div class="work-experience-container" v-for="(workExperience, index) in workExperiences" :key="index">
-            <ExperienceItem :workExperience="workExperience"/>
+            <ExperienceItem :experience="workExperience"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="py-16 bg-secondary/10">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+          <GraduationCap class="w-7 h-7"/>
+          Ausbildung
+        </h2>
+
+        <div class="space-y-12">
+          <div class="education-experience-container" v-for="(education, index) in educations" :key="index">
+            <ExperienceItem :experience="education"/>
           </div>
         </div>
       </div>
