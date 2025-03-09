@@ -33,10 +33,12 @@ const props = defineProps({
   resumeButton: {
     type: Object as PropType<IHeroButton>,
     required: false,
+    default: false,
   },
   contactButton: {
     type: Object as PropType<IHeroButton>,
     required: false,
+    default: false,
   },
 });
 </script>
@@ -46,24 +48,23 @@ const props = defineProps({
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div class="animate-fade-in">
         <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-          Hi, I'm John Doe
+          {{ props.title }}
         </h1>
         <p class="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-          A passionate <span class="text-primary font-medium">Frontend Developer</span> with 5 years of experience
-          building modern web applications.
+          {{ props.subtitle }}
         </p>
         <p class="text-base md:text-lg text-muted-foreground mb-12 leading-relaxed">
-          I specialize in creating responsive, accessible, and performant web applications using Vue, TypeScript, and
-          modern CSS frameworks. I'm passionate about user experience and building products that are both beautiful and
-          functional.
+          {{
+            props.description
+          }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <Button class="gap-2">
+          <Button class="gap-2" v-show="props.resumeButton.display">
             <Download class="w-4 h-4"/>
-            Download Resume
+            {{ props.resumeButton.text }}
           </Button>
-          <Button variant="outline">
-            Contact Me
+          <Button variant="outline" v-show="props.contactButton.display">
+            {{props.contactButton.text}}
           </Button>
         </div>
       </div>
