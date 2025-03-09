@@ -40,11 +40,30 @@ export default defineContentConfig({
 				link: z.string().optional(),
 			})
 		}),
-		skills: defineCollection({
-			source: 'skills/**/**.json',
+		codingSkills: defineCollection({
+			source: 'skills/code/**.json',
 			type: 'data',
 			schema: z.object({
 				name: z.string(),
+				icon: z.string().optional(),
+				remark: z.string().optional(),
+			})
+		}),
+		softSkills: defineCollection({
+			source: 'skills/soft/**.json',
+			type: 'data',
+			schema: z.object({
+				name: z.string(),
+				icon: z.string().optional(),
+				remark: z.string().optional(),
+			})
+		}),
+		hardSkills: defineCollection({
+			source: 'skills/hard/**.json',
+			type: 'data',
+			schema: z.object({
+				name: z.string(),
+				icon: z.string().optional(),
 				remark: z.string().optional(),
 			})
 		}),
