@@ -3,14 +3,15 @@ import { z } from 'zod'
 
 export default defineContentConfig({
 	collections: {
-		experience: defineCollection({
-			source: 'experience/**.json',
+		workExperience: defineCollection({
+			source: 'work-experience/**.json',
 			type: 'data',
 			schema: z.object({
-				job: z.string(),
-				enterprise: z.string(),
-				start_date: z.string(),
-				end_date: z.string().optional(),
+				title: z.string(),
+				location: z.string(),
+				url: z.string().optional(),
+				startDate: z.string(),
+				endDate: z.string().optional(),
 				description: z.string().optional(),
 				tags: z.array(z.string()).optional(),
 			})
@@ -18,10 +19,11 @@ export default defineContentConfig({
 		education: defineCollection({
 			source: 'education/**.json',
 			type: 'data',schema: z.object({
-				education: z.string(),
-				school: z.string(),
-				start_date: z.string(),
-				end_date: z.string().optional(),
+				title: z.string(),
+				location: z.string(),
+				url: z.string().optional(),
+				startDate: z.string(),
+				endDate: z.string().optional(),
 				description: z.string().optional(),
 				tags: z.array(z.string()).optional(),
 			})
