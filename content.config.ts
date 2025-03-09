@@ -46,5 +46,14 @@ export default defineContentConfig({
 				remark: z.string().optional(),
 			})
 		}),
+		general: defineCollection({
+			source: 'general/general.json',
+			type: 'data',
+			schema: z.object({
+				name: z.string(),
+				subtitle: z.string().optional(),
+				description: z.string(),
+			})
+		})
 	}
 })
