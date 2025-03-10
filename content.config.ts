@@ -33,11 +33,11 @@ export default defineContentConfig({
 			type: 'data',
 			schema: z.object({
 				title: z.string(),
-				image: z.string().optional(),
+				imageUrl: z.string().optional(),
 				description: z.string(),
 				tags: z.array(z.string()).optional(),
-				github_link: z.string().optional(),
-				link: z.string().optional(),
+				githubUrl: z.string().optional(),
+				liveUrl: z.string().optional(),
 			})
 		}),
 		codingSkills: defineCollection({

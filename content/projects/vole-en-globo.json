@@ -1,0 +1,14 @@
+{
+  "title": "Balloon Ride Booking Platform",
+  "description": "A platform for booking hot air balloon rides in Mexico.",
+  "imageUrl": "",
+  "imgOverlay": "Photo by Yancy Min on Unsplash",
+  "tags": [
+    "Nuxt.js",
+    "Stripe",
+    "Tailwind CSS / DaisyUI",
+    "AWS",
+    "Multilingual"
+  ],
+  "liveUrl": "https://vole-en-globo.com.mx"
+}
