@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { useAsyncData } from "#imports";
-import { Briefcase, GraduationCap, Brain } from "lucide-vue-next";
+import { Briefcase, GraduationCap, Brain, Github, ExternalLink, LayoutDashboard } from "lucide-vue-next";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/components/ui/card";
+import { Button } from "~/components/ui/button";
 
 const { data: general } = await useAsyncData(() => queryCollection("general").first());
 const { data: workExperiences } = await useAsyncData(() => queryCollection("workExperience").all());
 const { data: educations } = await useAsyncData(() => queryCollection("education").all());
 const { data: codingSkills } = await useAsyncData(() => queryCollection("codingSkills").all());
+const { data: projects } = await useAsyncData(() => queryCollection("projects").all());
 
 </script>
 
@@ -66,6 +69,23 @@ const { data: codingSkills } = await useAsyncData(() => queryCollection("codingS
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <SkillCard category-title="Coding" :skills-list="codingSkills ?? []"/>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-16 bg-secondary/10">
+    <Projects/>
+    <div class="container">
+      <div class="max-w-5xl">
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+          <LayoutDashboard class="w-7 h-7" />
+          Projekte
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" v-for="(project, index) in projects" :key="index">
+          <ProjectCard :project/>
+
         </div>
       </div>
     </div>
