@@ -1,5 +1,5 @@
-export interface ISkill{
+export interface ISkill {
 	title: string;
-	icon?:string;
+	icon?: string;
 	remark?: string;
 }
