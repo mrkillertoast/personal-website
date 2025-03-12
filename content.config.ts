@@ -18,7 +18,7 @@ export default defineContentConfig({
 		}),
 		education: defineCollection({
 			source: 'education/**.json',
-			type: 'data',schema: z.object({
+			type: 'data', schema: z.object({
 				title: z.string(),
 				location: z.string(),
 				url: z.string().optional(),
@@ -78,6 +78,14 @@ export default defineContentConfig({
 				location: z.string(),
 				email: z.string(),
 				images: z.array(z.string()).optional(),
+			})
+		}),
+		navigation: defineCollection({
+			source: 'navigation/**.json',
+			type: 'data',
+			schema: z.object({
+				name: z.string(),
+				url: z.string(),
 			})
 		})
 	}
