@@ -5,6 +5,9 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: [ '~/assets/css/tailwind.css', '~/assets/css/main.css' ],
 	modules: [ '@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxt/content', '@nuxt/icon' ],
+	runtimeConfig: {
+		plunkApiKey: process.env.PLUNK_API_KEY
+	},
 	shadcn: {
 		/**
 		 * Prefix for all the imported component
