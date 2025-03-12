@@ -9,11 +9,11 @@ import { Textarea } from '@/components/ui/textarea';
 const props = defineProps({
   location: {
     type: String,
-    required: true
+    required: false
   },
   email: {
     type: String,
-    required: true
+    required: false
   },
   contactText: {
     type: String,
@@ -74,7 +74,7 @@ const handleSubmit = async () => {
             </p>
 
             <div class="space-y-6">
-              <div class="flex items-start gap-4">
+              <div class="flex items-start gap-4" v-show="props.location">
                 <div class="mt-1 bg-secondary rounded-full p-2">
                   <MapPin class="w-5 h-5"/>
                 </div>
@@ -84,7 +84,7 @@ const handleSubmit = async () => {
                 </div>
               </div>
 
-              <div class="flex items-start gap-4">
+              <div class="flex items-start gap-4" v-show="props.email">
                 <div class="mt-1 bg-secondary rounded-full p-2">
                   <Mail class="w-5 h-5"/>
                 </div>

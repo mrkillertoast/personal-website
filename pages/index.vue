@@ -92,7 +92,7 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
   </section>
 
   <section id="contact" class="py-16">
-    <Contact/>
+    <Contact :email="general?.email" :location="general?.location" />
   </section>
 
 </template>
