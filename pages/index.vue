@@ -91,6 +91,10 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
     </div>
   </section>
 
+  <section id="contact" class="py-16">
+    <Contact/>
+  </section>
+
 </template>
 
 <style scoped>
