@@ -1,3 +1,19 @@
+<script setup lang="ts">
+import { ref } from "vue";
+import { Menu, X, Github, Linkedin, Mail } from "lucide-vue-next";
+import { Button } from "@/components/ui/button";
+
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+const closeMenu = () => {
+  isMenuOpen.value = false;
+};
+</script>
+
 <template>
   <header class="sticky top-0 z-40 w-full bg-background/80 backdrop-blur-sm border-b">
     <div class="container flex items-center justify-between h-16 mx-auto">
@@ -116,19 +132,3 @@
     </div>
   </header>
 </template>
-
-<script setup>
-import { ref } from "vue";
-import { Menu, X, Github, Linkedin, Mail } from "lucide-vue-next";
-import { Button } from "@/components/ui/button";
-
-const isMenuOpen = ref(false);
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
-};
-
-const closeMenu = () => {
-  isMenuOpen.value = false;
-};
-</script>
