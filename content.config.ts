@@ -74,6 +74,9 @@ export default defineContentConfig({
 				name: z.string(),
 				subtitle: z.string().optional(),
 				description: z.string(),
+				location: z.string(),
+				email: z.string(),
+				images: z.array(z.string()).optional(),
 			})
 		})
 	}
