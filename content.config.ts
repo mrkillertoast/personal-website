@@ -72,6 +72,7 @@ export default defineContentConfig({
 			type: 'data',
 			schema: z.object({
 				name: z.string(),
+				headline: z.string(),
 				subtitle: z.string().optional(),
 				description: z.string(),
 				location: z.string(),
