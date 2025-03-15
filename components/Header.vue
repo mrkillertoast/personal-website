@@ -18,18 +18,23 @@ const closeMenu = () => {
 //Data fetching
 const { data: general } = await useAsyncData(() => queryCollection("general").first());
 const { data: navigation } = await useAsyncData(() => queryCollection("navigation").all());
+
+const sortedNavigation = computed(() => {
+  if (!navigation.value) return [];
+  return [...navigation.value].sort((a, b) => a.order - b.order);
+});
 </script>
 
 <template>
   <header class="sticky top-0 z-40 w-full bg-background/80 backdrop-blur-sm border-b">
     <div class="container flex items-center justify-between h-16 mx-auto">
       <NuxtLink to="/" class="font-semibold text-lg tracking-tight">
-        {{ general.name }}
+        {{ general?.name }}
       </NuxtLink>
 
       <!-- Desktop navigation -->
       <nav class="hidden md:flex items-center space-x-6">
-        <a v-for="(item, index) in navigation" :key="index"
+        <a v-for="(item, index) in sortedNavigation" :key="index"
            :href="item.url"
            class="text-sm font-medium hover:text-primary/80 transition-colors"
         >
@@ -57,7 +62,7 @@ const { data: navigation } = await useAsyncData(() => queryCollection("navigatio
     <div v-if="isMenuOpen" class="md:hidden">
       <div class="container py-4 space-y-4">
         <a
-            v-for="(item, index) in navigation" :key="index"
+            v-for="(item, index) in sortedNavigation" :key="index"
             :href="item.url"
             class="block text-sm font-medium hover:text-primary/80 transition-colors"
             @click="closeMenu"
