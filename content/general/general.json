@@ -5,5 +5,9 @@
   "description": "Als motivierter Data Engineer verbinde ich mein Talent für zwischenmenschliche Beziehungen mit einer starken Überzeugung, dass datengetriebene Lösungen die Zukunft gestalten. Ich halte mich stets über die neuesten Trends und Technologien in den Bereichen Machine Learning, KI und Softwareengineering auf dem Laufenden. Auf der Suche nach neuen Herausforderungen bin ich immer bereit, mein Wissen zu erweitern und es in meiner Arbeit praktisch anzuwenden.\n\nDieser Text betont deine Fähigkeiten und Motivation und passt gut auf eine professionelle Webseite.",
   "location": "Biel/Bienne, Schweiz",
   "email": "lukas@rauscher.ai",
-  "images": []
+  "images": ["/images/personal/lukas_portrait_1.jpg", "/images/personal/lukas_portrait_2.jpg"],
+  "githubUrl": "https://github.com/mrkillertoast",
+  "linkedinUrl": "https://www.linkedin.com/in/lukas-rauscher-64945a132/",
+  "MediumUrl": "",
+  "mailUrl": "mailto:lukas@rauscher.ai"
 }

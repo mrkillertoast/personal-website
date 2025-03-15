@@ -1,4 +1,5 @@
 {
-    "name":"Über mich"
-    "url": "#about"
+  "name": "Über mich",
+  "url": "#about",
+  "order": 1
 }

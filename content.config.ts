@@ -86,6 +86,7 @@ export default defineContentConfig({
 			schema: z.object({
 				name: z.string(),
 				url: z.string(),
+				order: z.number(),
 			})
 		})
 	}
