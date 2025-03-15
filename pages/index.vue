@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useAsyncData } from "#imports";
-import { Briefcase, GraduationCap, Brain, Github, ExternalLink, LayoutDashboard } from "lucide-vue-next";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/components/ui/card";
-import { Button } from "~/components/ui/button";
+import { Briefcase, GraduationCap, Brain, LayoutDashboard } from "lucide-vue-next";
 
 const { data: general } = await useAsyncData(() => queryCollection("general").first());
 const { data: workExperiences } = await useAsyncData(() => queryCollection("workExperience").all());
@@ -80,7 +78,7 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
     <div class="container">
       <div class="max-w-5xl">
         <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-          <LayoutDashboard class="w-7 h-7" />
+          <LayoutDashboard class="w-7 h-7"/>
           Projekte
         </h2>
 
@@ -93,7 +91,7 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
   </section>
 
   <section id="contact" class="py-16">
-    <Contact :email="general?.email" :location="general?.location" />
+    <Contact :email="general?.email" :location="general?.location"/>
   </section>
 
 </template>
