@@ -11,10 +11,6 @@ const props = defineProps({
     required: true,
   }
 })
-
-console.log(props.project)
-
-
 </script>
 
 <template>
@@ -53,7 +49,7 @@ console.log(props.project)
         <a :href="props.project.githubUrl" target="_blank">Code</a>
       </Button>
       <div class="placeholder" v-else/>
-      <Button variant="ghost" size="sm" class="gap-1.5" v-show="props.project.liveUrl">
+      <Button variant="ghost" size="sm" class="gap-1.5" v-if="props.project.liveUrl">
         <ExternalLink class="h-4 w-4"/>
         <a :href="props.project.liveUrl" target="_blank">Live</a>
       </Button>

@@ -74,7 +74,6 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
   </section>
 
   <section id="projects" class="py-16 bg-secondary/10">
-    <Projects/>
     <div class="container">
       <div class="max-w-5xl">
         <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
