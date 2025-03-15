@@ -6,7 +6,8 @@ export default defineNuxtConfig({
 	css: [ '~/assets/css/tailwind.css', '~/assets/css/main.css' ],
 	modules: [ '@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxt/content', '@nuxt/icon' ],
 	runtimeConfig: {
-		plunkApiKey: process.env.PLUNK_API_KEY
+		plunkApiKey: process.env.PLUNK_API_KEY,
+		receiverEmail: process.env.RECEIVER_EMAIL
 	},
 	shadcn: {
 		/**

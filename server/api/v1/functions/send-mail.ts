@@ -4,9 +4,6 @@ export default defineEventHandler(async (event) => {
 
 	const body = await readBody(event)
 
-	console.log(body)
-
-
 	const emailContent = `
     Name: ${ body.name } <br><br>
     Email: ${ body.email }<br><br>
@@ -17,10 +14,10 @@ export default defineEventHandler(async (event) => {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
-			"Authorization": `Bearer ${ config.private.plunkApiKey }`
+			"Authorization": `Bearer ${ config.plunkApiKey }`
 		},
 		body: JSON.stringify({
-			"to": "selina.rufer00@gmail.com",
+			"to": config.receiverEmail,
 			"subject": "New Message from Website",
 			"body": emailContent
 		})
