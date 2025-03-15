@@ -78,6 +78,9 @@ export default defineContentConfig({
 				location: z.string(),
 				email: z.string(),
 				images: z.array(z.string()).optional(),
+				githubUrl: z.string().optional(),
+				linkedInUrl: z.string().optional(),
+				mailtoUrl: z.string().optional(),
 			})
 		}),
 		navigation: defineCollection({

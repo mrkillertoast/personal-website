@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import { Menu, X, Github, Linkedin, Mail } from "lucide-vue-next";
 import { Button } from "@/components/ui/button";
+import SocialLinks from "~/components/SocialLinks.vue";
 
 //Menu controls
 const isMenuOpen = ref(false);
@@ -36,50 +37,8 @@ const { data: navigation } = await useAsyncData(() => queryCollection("navigatio
         </a>
       </nav>
 
-
-      <!-- <nav class="hidden md:flex items-center space-x-6">
-         <a
-             href="#about"
-             class="text-sm font-medium hover:text-primary/80 transition-colors"
-         >
-           About
-         </a>
-         <a
-             href="#experience"
-             class="text-sm font-medium hover:text-primary/80 transition-colors"
-         >
-           Experience
-         </a>
-         <a
-             href="#skills"
-             class="text-sm font-medium hover:text-primary/80 transition-colors"
-         >
-           Skills
-         </a>
-         <a
-             href="#projects"
-             class="text-sm font-medium hover:text-primary/80 transition-colors"
-         >
-           Projects
-         </a>
-         <a
-             href="#contact"
-             class="text-sm font-medium hover:text-primary/80 transition-colors"
-         >
-           Contact
-         </a>
-       </nav>-->
-
       <div class="hidden md:flex items-center space-x-3">
-        <Button size="icon" variant="ghost">
-          <Github class="w-5 h-5"/>
-        </Button>
-        <Button size="icon" variant="ghost">
-          <Linkedin class="w-5 h-5"/>
-        </Button>
-        <Button size="icon" variant="ghost">
-          <Mail class="w-5 h-5"/>
-        </Button>
+        <SocialLinks :github="general?.githubUrl" :linked-in="general?.linkedInUrl" :mailto="general?.mailtoUrl"/>
       </div>
 
       <!-- Mobile menu button -->
@@ -98,50 +57,16 @@ const { data: navigation } = await useAsyncData(() => queryCollection("navigatio
     <div v-if="isMenuOpen" class="md:hidden">
       <div class="container py-4 space-y-4">
         <a
-            href="#about"
+            v-for="(item, index) in navigation" :key="index"
+            :href="item.url"
             class="block text-sm font-medium hover:text-primary/80 transition-colors"
             @click="closeMenu"
         >
-          About
+          {{ item.name }}
         </a>
-        <a
-            href="#experience"
-            class="block text-sm font-medium hover:text-primary/80 transition-colors"
-            @click="closeMenu"
-        >
-          Experience
-        </a>
-        <a
-            href="#skills"
-            class="block text-sm font-medium hover:text-primary/80 transition-colors"
-            @click="closeMenu"
-        >
-          Skills
-        </a>
-        <a
-            href="#projects"
-            class="block text-sm font-medium hover:text-primary/80 transition-colors"
-            @click="closeMenu"
-        >
-          Projects
-        </a>
-        <a
-            href="#contact"
-            class="block text-sm font-medium hover:text-primary/80 transition-colors"
-            @click="closeMenu"
-        >
-          Contact
-        </a>
+
         <div class="flex space-x-3 pt-3 border-t">
-          <Button size="icon" variant="ghost">
-            <Github class="w-5 h-5"/>
-          </Button>
-          <Button size="icon" variant="ghost">
-            <Linkedin class="w-5 h-5"/>
-          </Button>
-          <Button size="icon" variant="ghost">
-            <Mail class="w-5 h-5"/>
-          </Button>
+          <SocialLinks :github="general?.githubUrl" :linked-in="general?.linkedInUrl" :mailto="general?.mailtoUrl"/>
         </div>
       </div>
     </div>

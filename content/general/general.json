@@ -7,7 +7,6 @@
   "email": "lukas@rauscher.ai",
   "images": ["/images/personal/lukas_portrait_1.jpg", "/images/personal/lukas_portrait_2.jpg"],
   "githubUrl": "https://github.com/mrkillertoast",
-  "linkedinUrl": "https://www.linkedin.com/in/lukas-rauscher-64945a132/",
-  "MediumUrl": "",
-  "mailUrl": "mailto:lukas@rauscher.ai"
+  "linkedInUrl": "https://www.linkedin.com/in/lukas-rauscher-64945a132/",
+  "mailtoUrl": "mailto:lukas@rauscher.ai"
 }
