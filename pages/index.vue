@@ -20,6 +20,7 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
         :description="general?.description"
         :resume-button="{ display:true, text: 'Lebenslauf herunterladen', link: '' }"
         :contactButton="{display:true, text: 'Kontakt', link: ''}"
+        :images="general?.images"
     />
   </section>
 

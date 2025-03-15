@@ -40,6 +40,10 @@ const props = defineProps({
     required: false,
     default: false,
   },
+  images: {
+    type: Array as PropType<string[]>,
+    required: false,
+  },
 });
 </script>
 
@@ -64,7 +68,7 @@ const props = defineProps({
             {{ props.resumeButton.text }}
           </Button>
           <Button variant="outline" v-show="props.contactButton.display">
-            {{props.contactButton.text}}
+            {{ props.contactButton.text }}
           </Button>
         </div>
       </div>
@@ -72,7 +76,7 @@ const props = defineProps({
       <div class="animate-fade-in">
         <Carousel class="w-full max-w-xs mx-auto">
           <CarouselContent>
-            <CarouselItem v-for="(image, index) in personalImages" :key="index">
+            <CarouselItem v-for="(image, index) in props.images" :key="index">
               <div class="p-1">
                 <div class="overflow-hidden rounded-lg shadow-md">
                   <img
