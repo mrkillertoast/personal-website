@@ -6,7 +6,14 @@ const { data: general } = await useAsyncData(() => queryCollection("general").fi
 const { data: workExperiences } = await useAsyncData(() => queryCollection("workExperience").all());
 const { data: educations } = await useAsyncData(() => queryCollection("education").all());
 const { data: codingSkills } = await useAsyncData(() => queryCollection("codingSkills").all());
+const { data: softSkills } = await useAsyncData(() => queryCollection("softSkills").all());
+const { data: hardSkills } = await useAsyncData(() => queryCollection("hardSkills").all());
 const { data: projects } = await useAsyncData(() => queryCollection("projects").all());
+
+const sortedWorkExperiences = computed(() => {
+  if (!workExperiences.value) return [];
+  return [ ...workExperiences.value ].sort((b, a) => a.order - b.order);
+});
 
 </script>
 
@@ -31,7 +38,7 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
         </h2>
 
         <div class="grid grid-cols-1 gap-10">
-          <div v-for="(workExperience, index) in workExperiences" :key="index">
+          <div v-for="(workExperience, index) in sortedWorkExperiences" :key="index">
             <ExperienceItem :experience="workExperience"/>
           </div>
         </div>
@@ -58,16 +65,17 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
 
   <section id="skills" class="py-16 bg-secondary/10">
     <div class="container">
-      <div class="max-w-3xl mx-auto">
+      <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-bold mb-12 flex items-center  gap-3">
           <Brain class="w-7 h-7"/>
           Skills & Fähigkeiten
         </h2>
 
-        <div class="space-y-12 ">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <SkillCard category-title="Coding" :skills-list="codingSkills ?? []"/>
-          </div>
+        <div class="grid md:grid-cols-4 gap-4">
+          <SkillCard category-title="Coding" :skills-list="codingSkills ?? []"/>
+          <SkillCard category-title="Soft" :skills-list="softSkills ?? []"/>
+          <SkillCard category-title="Hard" :skills-list="hardSkills ?? []"/>
+          <SkillCard category-title="Hard" :skills-list="hardSkills ?? []"/>
         </div>
       </div>
     </div>
@@ -75,7 +83,7 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
 
   <section id="projects" class="py-16 bg-secondary/10">
     <div class="container">
-      <div class="max-w-5xl">
+      <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
           <LayoutDashboard class="w-7 h-7"/>
           Projekte
@@ -83,7 +91,6 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" v-for="(project, index) in projects" :key="index">
           <ProjectCard :project/>
-
         </div>
       </div>
     </div>
