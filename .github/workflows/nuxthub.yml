@@ -32,6 +32,11 @@ jobs:
 
       - name: Build application
         run: npm run build
+        env:
+          PLUNK_API_KEY: ${{ secrets.PLUNK_API_KEY }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+          TURNSTILE_SITE_KEY: ${{ secrets.TURNSTILE_SITE_KEY }}
 
       - name: Deploy to NuxtHub
         uses: nuxt-hub/action@v1
