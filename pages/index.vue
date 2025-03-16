@@ -30,8 +30,8 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
           Arbeitserfahrung
         </h2>
 
-        <div class="space-y-12">
-          <div class="work-experience-container" v-for="(workExperience, index) in workExperiences" :key="index">
+        <div class="grid grid-cols-1 gap-10">
+          <div v-for="(workExperience, index) in workExperiences" :key="index">
             <ExperienceItem :experience="workExperience"/>
           </div>
         </div>
@@ -47,8 +47,8 @@ const { data: projects } = await useAsyncData(() => queryCollection("projects").
           Ausbildung
         </h2>
 
-        <div class="space-y-12">
-          <div class="education-experience-container" v-for="(education, index) in educations" :key="index">
+        <div class="grid grid-cols-1 gap-10">
+          <div v-for="(education, index) in educations" :key="index">
             <ExperienceItem :experience="education"/>
           </div>
         </div>
