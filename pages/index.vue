@@ -62,7 +62,7 @@ const sortedWorkExperiences = computed(() => {
 
         <div class="grid grid-cols-1 gap-10">
           <div v-for="(education, index) in educations" :key="index">
-            <ExperienceItem :experience="education"/>
+            <LazyExperienceItem :experience="education"/>
           </div>
         </div>
       </div>
@@ -78,10 +78,10 @@ const sortedWorkExperiences = computed(() => {
         </h2>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <SkillCard category-title="Coding" :skills-list="codingSkills ?? []"/>
-          <SkillCard category-title="Soft" :skills-list="softSkills ?? []"/>
-          <SkillCard category-title="Hard" :skills-list="hardSkills ?? []"/>
-          <SkillCard category-title="Languages" :skills-list="sortedLanguages ?? []"/>
+          <LazySkillCard category-title="Coding" :skills-list="codingSkills ?? []"/>
+          <LazySkillCard category-title="Soft" :skills-list="softSkills ?? []"/>
+          <LazySkillCard category-title="Hard" :skills-list="hardSkills ?? []"/>
+          <LazySkillCard category-title="Languages" :skills-list="sortedLanguages ?? []"/>
         </div>
       </div>
     </div>
@@ -97,7 +97,7 @@ const sortedWorkExperiences = computed(() => {
 
         <div class="grid  md:grid-cols-3 gap-4">
           <div v-for="(project, index) in projects" :key="index">
-            <ProjectCard :project/>
+            <LazyProjectCard :project/>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ const sortedWorkExperiences = computed(() => {
   </section>
 
   <section id="contact" class="py-16">
-    <Contact :email="general?.email" :location="general?.location"/>
+    <LazyContact :email="general?.email" :location="general?.location"/>
   </section>
 
 </template>
