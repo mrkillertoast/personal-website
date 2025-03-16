@@ -4,6 +4,13 @@
   "url": "https://www.bfh.ch/",
   "startDate": "2023",
   "endDate": "heute",
-  "description": "",
-  "tags": ["Machine Learning", "Data Engineering","SQL","Python","Software Engineering"]
+  "description": "In meiner aktuelle Weiterbildung an der BFH im Bereich Data Engineering schärfe ich mein Verständnis für das Zeitalter der Daten. Ich beschäftige mich intensiv mit den Herausforderungen von Big Data und den damit verbundenen Aufgaben, denn was für Menschen logisch ist, kann der Computer nicht verstehen. Dabei lerne ich, Chancen zu erkennen und die aktuellen Grenzen dieser Technologie realistisch einzuschätzen.",
+  "tags": [
+    "Machine Learning",
+    "Data Engineering",
+    "SQL",
+    "Python",
+    "Software Engineering"
+  ],
+  "order": 1
 }
