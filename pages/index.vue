@@ -9,6 +9,12 @@ const { data: codingSkills } = await useAsyncData(() => queryCollection("codingS
 const { data: softSkills } = await useAsyncData(() => queryCollection("softSkills").all());
 const { data: hardSkills } = await useAsyncData(() => queryCollection("hardSkills").all());
 const { data: projects } = await useAsyncData(() => queryCollection("projects").all());
+const { data: languageSkills } = await useAsyncData(() => queryCollection("languageSkills").all());
+
+const sortedLanguages = computed(() => {
+  if (!languageSkills.value) return [];
+  return [ ...languageSkills.value ].sort((a, b) => a.order - b.order);
+});
 
 const sortedWorkExperiences = computed(() => {
   if (!workExperiences.value) return [];
@@ -75,7 +81,7 @@ const sortedWorkExperiences = computed(() => {
           <SkillCard category-title="Coding" :skills-list="codingSkills ?? []"/>
           <SkillCard category-title="Soft" :skills-list="softSkills ?? []"/>
           <SkillCard category-title="Hard" :skills-list="hardSkills ?? []"/>
-          <SkillCard category-title="Hard" :skills-list="hardSkills ?? []"/>
+          <SkillCard category-title="Languages" :skills-list="sortedLanguages ?? []"/>
         </div>
       </div>
     </div>
