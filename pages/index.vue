@@ -77,7 +77,7 @@ const sortedWorkExperiences = computed(() => {
           Skills & Fähigkeiten
         </h2>
 
-        <div class="grid md:grid-cols-4 gap-4">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <SkillCard category-title="Coding" :skills-list="codingSkills ?? []"/>
           <SkillCard category-title="Soft" :skills-list="softSkills ?? []"/>
           <SkillCard category-title="Hard" :skills-list="hardSkills ?? []"/>
