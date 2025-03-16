@@ -95,8 +95,10 @@ const sortedWorkExperiences = computed(() => {
           Projekte
         </h2>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" v-for="(project, index) in projects" :key="index">
-          <ProjectCard :project/>
+        <div class="grid  md:grid-cols-3 gap-4">
+          <div v-for="(project, index) in projects" :key="index">
+            <ProjectCard :project/>
+          </div>
         </div>
       </div>
     </div>
