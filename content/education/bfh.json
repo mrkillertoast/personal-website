@@ -4,5 +4,6 @@
   "url": "https://www.bfh.ch/",
   "startDate": "2023",
   "endDate": "heute",
+  "description": "",
   "tags": ["Machine Learning", "Data Engineering","SQL","Python","Software Engineering"]
 }
