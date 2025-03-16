@@ -68,7 +68,9 @@ const props = defineProps({
             {{ props.resumeButton.text }}
           </Button>-->
           <Button v-show="props.contactButton.display">
-            {{ props.contactButton.text }}
+            <a :href="props.contactButton.link">
+              {{ props.contactButton.text }}
+            </a>
           </Button>
         </div>
       </div>
