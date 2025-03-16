@@ -14,6 +14,7 @@ export default defineContentConfig({
 				endDate: z.string().optional(),
 				description: z.string().optional(),
 				tags: z.array(z.string()).optional(),
+				order: z.number(),
 			})
 		}),
 		education: defineCollection({
@@ -26,6 +27,7 @@ export default defineContentConfig({
 				endDate: z.string().optional(),
 				description: z.string().optional(),
 				tags: z.array(z.string()).optional(),
+				order: z.number(),
 			})
 		}),
 		projects: defineCollection({
