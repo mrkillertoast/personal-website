@@ -5,5 +5,9 @@
   "startDate": "10.2024",
   "endDate": "heute",
   "description": "Some sample description text",
-  "tags": ["Projektleitung", "Kundenbetreuung"]
+  "tags": [
+    "Projektleitung",
+    "Kundenbetreuung"
+  ],
+  "order": 4
 }
