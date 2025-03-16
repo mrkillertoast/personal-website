@@ -1,3 +1,4 @@
+export * from "./experience"
 export * from "./hero";
-export * from "./work";
 export * from "./project";
+export * from "./security";
