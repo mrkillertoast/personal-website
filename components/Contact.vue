@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Mail, MapPin, Phone } from 'lucide-vue-next';
+import { Mail, MapPin } from 'lucide-vue-next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import type { ITurnstyleResponse } from "~/types";
 
 const props = defineProps({
   location: {
@@ -31,12 +32,30 @@ const isSubmitting = ref(false);
 const contactSuccessMessage = ref('');
 const contactErrorMessage = ref('');
 
-const handleSubmit = async () => {
-  // Add your form submission logic here
+// Turnstile Variables
+const token = ref('');
+const config = useRuntimeConfig();
 
+
+const handleSubmit = async () => {
   contactSuccessMessage.value = '';
   contactErrorMessage.value = '';
   isSubmitting.value = true;
+
+  const turnstilePassed = await $fetch<ITurnstyleResponse>('/api/v1/functions/validate-turnstile', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ token: token.value })
+  });
+
+  if (!turnstilePassed.valid) {
+    contactErrorMessage.value = 'Bitte bestätigen Sie, dass Sie kein Roboter sind';
+    isSubmitting.value = false;
+    return;
+  }
+
   const response = await $fetch('/api/v1/functions/send-mail', {
     method: 'POST',
     headers: {
@@ -54,8 +73,6 @@ const handleSubmit = async () => {
   isSubmitting.value = false;
 
 };
-
-
 </script>
 
 <template>
@@ -127,6 +144,7 @@ const handleSubmit = async () => {
                       required
                   />
                 </div>
+                <NuxtTurnstile v-model="token" :site-key="config.public.turnstile.siteKey" class="mt-4"/>
                 <Button type="submit" class="w-full" v-if="!isSubmitting">
                   Nachricht absenden
                 </Button>
