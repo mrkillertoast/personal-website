@@ -1,4 +1,5 @@
 {
   "name": "SQL",
+  "icon": "mdi:database",
   "remark":"not product specific"
 }
