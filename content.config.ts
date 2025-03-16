@@ -69,6 +69,16 @@ export default defineContentConfig({
 				remark: z.string().optional(),
 			})
 		}),
+		languageSkills: defineCollection({
+			source: 'skills/languages/**.json',
+			type: 'data',
+			schema: z.object({
+				name: z.string(),
+				icon: z.string().optional(),
+				remark: z.string().optional(),
+				order: z.number(),
+			})
+		}),
 		general: defineCollection({
 			source: 'general/general.json',
 			type: 'data',
