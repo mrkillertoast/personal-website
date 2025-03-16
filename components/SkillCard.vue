@@ -11,6 +11,7 @@ const props = defineProps({
     required: true,
   }
 })
+
 </script>
 
 <template>
@@ -21,7 +22,7 @@ const props = defineProps({
     <div class="p-6 pt-0">
       <ul class="space-y-2">
         <li v-for="(skill, index) in props.skillsList" :key="index" class="flex items-center">
-          <SkillItem :title="skill.meta.body.title" :icon="skill.meta.body.icon" :remark="skill.meta.body.remark"/>
+          <SkillItem :title="skill.meta.body.name" :icon="skill.meta.body.icon" :remark="skill.meta.body.remark"/>
         </li>
       </ul>
     </div>
