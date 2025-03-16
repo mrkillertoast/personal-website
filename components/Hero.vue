@@ -63,11 +63,11 @@ const props = defineProps({
           }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <Button class="gap-2" v-show="props.resumeButton.display">
+          <!--<Button class="gap-2" v-show="props.resumeButton.display">
             <Download class="w-4 h-4"/>
             {{ props.resumeButton.text }}
-          </Button>
-          <Button variant="outline" v-show="props.contactButton.display">
+          </Button>-->
+          <Button v-show="props.contactButton.display">
             {{ props.contactButton.text }}
           </Button>
         </div>
