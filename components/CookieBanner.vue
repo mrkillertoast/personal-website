@@ -69,7 +69,7 @@ onMounted(() => {
   <div v-if="showBanner" class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6">
     <Card class="mx-auto max-w-4xl shadow-lg">
       <CardHeader>
-        <CardTitle>I'am a Data Engineer, what did you expect?<span class="text-sm"> (Cookie-Einstellungen)</span></CardTitle>
+        <CardTitle>I'm a Data Engineer, what did you expect?<span class="text-sm"> (Cookie-Einstellungen)</span></CardTitle>
         <CardDescription>
           Diese Website verwendet Cookies, um Ihr Browsererlebnis zu verbessern und Analysen zur Websitenutzung bereitzustellen.
         </CardDescription>
