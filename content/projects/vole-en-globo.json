@@ -1,8 +1,8 @@
 {
   "title": "Balloon Ride Booking Platform",
   "description": "Buchungsplattform für Heissluftballonfahrten in Mexiko. Simple, responsive und mehrsprachig.",
-  "imageUrl": "/images/projects/vole-en-globo.png",
-  "imgOverlay": "Photo by Yancy Min on Unsplash",
+  "imageUrl": "/images/projects/vole-en-globo.webp",
+  "imgOverlay": "",
   "tags": [
     "Nuxt.js",
     "Stripe",
