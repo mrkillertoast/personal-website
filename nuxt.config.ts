@@ -19,11 +19,7 @@ export default defineNuxtConfig({
 								turnstile:{
 												secretKey: process.env.TURNSTILE_SECRET_KEY
 								},
-								public: {
-												gtm: {
-																id: process.env.GOOGLE_TAG_MANAGER_ID
-												}
-								}
+								public: {}
 				},
 				turnstile: {
 								siteKey: process.env.TURNSTILE_SITE_KEY,

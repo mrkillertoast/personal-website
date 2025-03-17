@@ -63,6 +63,7 @@ PLUNK_API_KEY=<your_plunk_api_key>
 RECEIVER_EMAIL=<your_email_address>
 TURNSTILE_SECRET_KEY=<your_turnstile_secret_key>
 TURNSTILE_SITE_KEY=<your_turnstile_site_key>
+GOOGLE_ANALYTICS_ID=<your_google_analytics_id>
 ```
 
 ### Development
@@ -118,3 +119,36 @@ yarn preview
 # bun
 bun run preview
 ```
+
+## Cookie Banner Implementation
+
+This project includes a cookie banner that allows users to control their privacy preferences for Google Analytics.
+
+### Features
+
+- Cookie banner that matches the site's design using shadcn-ui components
+- Options to accept or decline Google Analytics
+- User selection is saved in a cookie that expires after 365 days
+- Google Analytics is blocked until consent is given
+
+### Configuration
+
+1. Replace the placeholder value in the `.env` file with your actual Google Analytics ID:
+
+```
+GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX  # Replace with your actual Google Analytics ID
+```
+
+2. The cookie banner will automatically appear to users who haven't made a selection yet.
+
+3. The user's selection is stored in a cookie named `cookie-consent` that contains a JSON object with the user's preferences.
+
+### How It Works
+
+- The cookie banner component (`components/CookieBanner.vue`) displays the privacy options to the user
+- The Google Analytics integration (`plugins/gtag.client.ts`) respects the user's consent choice
+- The nuxt-gtag module is configured to disable tracking by default until consent is given
+
+### Customization
+
+You can customize the cookie banner by editing the `components/CookieBanner.vue` file. The text is currently in German, but you can change it to any language you prefer.
