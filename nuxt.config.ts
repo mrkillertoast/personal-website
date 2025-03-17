@@ -10,14 +10,16 @@ export default defineNuxtConfig({
 				 '@nuxt/content',
 				 '@nuxt/icon',
 				 '@nuxtjs/turnstile',
-				 '@nuxthub/core'
+				 '@nuxthub/core',
+				 'nuxt-gtag'
 				],
 				runtimeConfig: {
 								plunkApiKey: process.env.PLUNK_API_KEY,
 								receiverEmail: process.env.RECEIVER_EMAIL,
 								turnstile:{
 												secretKey: process.env.TURNSTILE_SECRET_KEY
-								}
+								},
+								public: {}
 				},
 				turnstile: {
 								siteKey: process.env.TURNSTILE_SITE_KEY,
@@ -36,6 +38,13 @@ export default defineNuxtConfig({
 				icon: {
 								serverBundle: {
 												collections: [ 'lucide', 'cib' ]
+								}
+				},
+				gtag: {
+								id: process.env.GOOGLE_ANALYTICS_ID,
+								initialConsent: false, // Disable tracking by default
+								config: {
+												cookie_flags: 'SameSite=None;Secure'
 								}
 				}
 });

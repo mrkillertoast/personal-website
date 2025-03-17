@@ -37,6 +37,7 @@ jobs:
           RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
           TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
           TURNSTILE_SITE_KEY: ${{ secrets.TURNSTILE_SITE_KEY }}
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
 
       - name: Deploy to NuxtHub
         uses: nuxt-hub/action@v1
