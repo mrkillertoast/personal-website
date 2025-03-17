@@ -76,22 +76,22 @@ onMounted(() => {
       </CardHeader>
       <CardContent>
         <div class="space-y-4">
-          <div class="flex items-center justify-between">
-            <div>
+          <div class="grid grid-cols-3 md:grid-cols-5">
+            <div class="col-span-2 md:col-span-4">
               <h4 class="text-sm font-medium">Notwendige Cookies</h4>
               <p class="text-xs text-muted-foreground">Diese Cookies sind für die Funktionalität der Website erforderlich und können nicht deaktiviert werden.</p>
             </div>
-            <div class="flex items-center">
+            <div class="justify-self-end self-center">
               <span class="text-xs text-muted-foreground mr-2">Immer aktiv</span>
             </div>
           </div>
 
-          <div class="flex items-center justify-between">
-            <div>
+          <div class="grid grid-cols-3 md:grid-cols-5">
+            <div class="col-span-2 md:col-span-4">
               <h4 class="text-sm font-medium">Google Analytics</h4>
               <p class="text-xs text-muted-foreground">Hilft mir zu verstehen, wie Besucher mit der Website interagieren. Zudem besteht persönliches Interesse ;)</p>
             </div>
-            <div class="flex items-center">
+            <div class="justify-self-end self-center">
               <input 
                 type="checkbox" 
                 id="analytics-consent" 
@@ -105,9 +105,8 @@ onMounted(() => {
         </div>
       </CardContent>
       <CardFooter class="flex justify-between">
-        <Button variant="outline" @click="declineAll">Ablehnen</Button>
+        <Button variant="outline" @click="declineAll">nur Notwendige</Button>
         <div class="space-x-2">
-          <Button variant="outline" @click="saveConsent()">Auswahl speichern</Button>
           <Button @click="saveConsent(true)">Alle akzeptieren</Button>
         </div>
       </CardFooter>
