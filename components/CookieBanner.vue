@@ -69,7 +69,7 @@ onMounted(() => {
   <div v-if="showBanner" class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6">
     <Card class="mx-auto max-w-4xl shadow-lg">
       <CardHeader>
-        <CardTitle>Cookie-Einstellungen</CardTitle>
+        <CardTitle>I'am a Data Engineer, what did you expect?<span class="text-sm"> (Cookie-Einstellungen)</span></CardTitle>
         <CardDescription>
           Diese Website verwendet Cookies, um Ihr Browsererlebnis zu verbessern und Analysen zur Websitenutzung bereitzustellen.
         </CardDescription>
@@ -89,7 +89,7 @@ onMounted(() => {
           <div class="flex items-center justify-between">
             <div>
               <h4 class="text-sm font-medium">Google Analytics</h4>
-              <p class="text-xs text-muted-foreground">Hilft uns zu verstehen, wie Besucher mit unserer Website interagieren.</p>
+              <p class="text-xs text-muted-foreground">Hilft mir zu verstehen, wie Besucher mit der Website interagieren. Zudem besteht persönliches Interesse ;)</p>
             </div>
             <div class="flex items-center">
               <input 
