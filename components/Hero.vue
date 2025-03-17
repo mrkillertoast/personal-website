@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Download } from "lucide-vue-next";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -9,12 +8,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import type { IHeroButton } from "~/types/hero/IHeroButton";
-// Sample portrait images for the slider
-const personalImages = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&h=750",
-  "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=500&h=750",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&h=750",
-];
 
 const props = defineProps({
   title: {
