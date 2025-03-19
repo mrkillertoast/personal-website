@@ -18,8 +18,7 @@ export default defineNuxtConfig({
 			link: [
 				{ rel: 'icon', type: 'image/x-icon', href: '/images/favicons/favicon.ico' },
 				{ rel: 'apple-touch-icon', sizes: '180x180', href: '/images/favicons/apple-touch-icon.png' },
-				{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/images/favicons/favicon-32x32.png' },
-				{ rel: 'icon', type: 'image/png', sizes: '16x16', href: '/images/favicons/favicon-16x16.png' },
+				{ rel: 'icon', type: 'image/png', sizes: '96x96', href: '/images/favicons/favicon-96x96.png' },
 				{ rel: 'manifest', href: '/images/favicons/site.webmanifest' }
 			],
 			title: 'Rauscher.ai',
