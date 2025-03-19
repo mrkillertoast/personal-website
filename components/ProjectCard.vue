@@ -23,7 +23,7 @@ const props = defineProps({
           class="w-full h-full object-cover transition-transform hover:scale-105 duration-500 bg-gray-500 z-0"
           v-if="props.project.imageUrl"/>
       <img
-          src="/images/projects/placeholder.jpg"
+          src="/images/projects/placeholder.webp"
           :alt="props.project.title"
           class="w-full h-full object-cover transition-transform hover:scale-105 duration-500 bg-gray-500 z-0"
           v-else/>
