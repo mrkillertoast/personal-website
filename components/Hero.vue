@@ -68,8 +68,8 @@ const props = defineProps({
         </div>
       </div>
 
-      <div class="animate-fade-in">
-        <Carousel class="w-full max-w-xs mx-auto">
+      <div class="animate-fade-in p-8 lg:p-0">
+        <Carousel class="w-fit md:w-full max-w-xs mx-auto ">
           <CarouselContent>
             <CarouselItem v-for="(image, index) in props.images" :key="index">
               <div class="p-1">
