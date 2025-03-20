@@ -18,8 +18,7 @@ export default defineNuxtConfig({
 			link: [
 				{ rel: 'icon', type: 'image/x-icon', href: '/images/favicons/favicon.ico' },
 				{ rel: 'apple-touch-icon', sizes: '180x180', href: '/images/favicons/apple-touch-icon.png' },
-				{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/images/favicons/favicon-32x32.png' },
-				{ rel: 'icon', type: 'image/png', sizes: '16x16', href: '/images/favicons/favicon-16x16.png' },
+				{ rel: 'icon', type: 'image/png', sizes: '96x96', href: '/images/favicons/favicon-96x96.png' },
 				{ rel: 'manifest', href: '/images/favicons/site.webmanifest' }
 			],
 			title: 'Rauscher.ai',
@@ -58,10 +57,21 @@ export default defineNuxtConfig({
 		}
 	},
 	gtag: {
+		enabled: process.env.NODE_ENV === 'production',
 		id: process.env.GOOGLE_ANALYTICS_ID,
-		initialConsent: false, // Disable tracking by default
+		//initialConsent: false, // Disable tracking by default
 		config: {
-			cookie_flags: 'SameSite=None;Secure'
-		}
+			page_title: 'Lukas Rauscher',
+		},
+		initCommands: [
+			// Denies everything on startup
+			[ 'consent', 'default', {
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+				ad_storage: 'denied',
+				analytics_storage: 'denied',
+				wait_for_update: 500,
+			} ],
+		],
 	}
 });
