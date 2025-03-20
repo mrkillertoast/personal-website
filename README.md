@@ -145,10 +145,10 @@ GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX  # Replace with your actual Google Analytics ID
 
 ### How It Works
 
-- The cookie banner component (`components/CookieBanner.vue`) displays the privacy options to the user
-- The Google Analytics integration (`plugins/gtag.client.ts`) respects the user's consent choice
-- The nuxt-gtag module is configured to disable tracking by default until consent is given
+-How It Works
+The cookie banner component (components/CookieBanner.vue) displays the privacy options to the user
+The Google Analytics integration is configured through the nuxt-gtag module
+Google Analytics tracking is disabled by default until consent is given
 
 ### Customization
-
-You can customize the cookie banner by editing the `components/CookieBanner.vue` file. The text is currently in German, but you can change it to any language you prefer.
+You can customize the cookie banner by editing the components/CookieBanner.vue file. The text is currently in German, but you can change it to any language you prefer.
