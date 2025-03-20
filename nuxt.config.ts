@@ -57,10 +57,21 @@ export default defineNuxtConfig({
 		}
 	},
 	gtag: {
+		enabled: process.env.NODE_ENV === 'production',
 		id: process.env.GOOGLE_ANALYTICS_ID,
-		initialConsent: false, // Disable tracking by default
+		//initialConsent: false, // Disable tracking by default
 		config: {
-			cookie_flags: 'SameSite=None;Secure'
-		}
+			page_title: 'Lukas Rauscher',
+		},
+		initCommands: [
+			// Denies everything on startup
+			[ 'consent', 'default', {
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+				ad_storage: 'denied',
+				analytics_storage: 'denied',
+				wait_for_update: 500,
+			} ],
+		],
 	}
 });
