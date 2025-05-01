@@ -1,0 +1,14 @@
+{
+  "title": "Bookmark Garden",
+  "description": "Ein W.i.P. für die Organisation von Lesezeichen. (Vibe-coding Experiment)",
+  "imageUrl": "",
+  "imgOverlay": "",
+  "tags": [
+    "Nuxt.js",
+    "Appwrite",
+    "Tailwind CSS",
+    "Cloudflare Pages"
+  ],
+  "githubUrl": "https://github.com/mrkillertoast/bookmark-garden",
+  "liveUrl": ""
+}
