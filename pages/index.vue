@@ -8,7 +8,14 @@ const { data: educations } = await useAsyncData(() => queryCollection("education
 const { data: codingSkills } = await useAsyncData(() => queryCollection("codingSkills").all());
 const { data: softSkills } = await useAsyncData(() => queryCollection("softSkills").all());
 const { data: hardSkills } = await useAsyncData(() => queryCollection("hardSkills").all());
-const { data: projects } = await useAsyncData(() => queryCollection("projects").all());
+
+//Todo: fix type error
+const { data: projects } = await useAsyncData(() =>
+    queryCollection("projects")
+        .order("postingDate", "DESC")
+        .limit(3)
+        .all()
+);
 const { data: languageSkills } = await useAsyncData(() => queryCollection("languageSkills").all());
 
 const sortedLanguages = computed(() => {
@@ -92,14 +99,21 @@ const sortedWorkExperiences = computed(() => {
       <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
           <LayoutDashboard class="w-7 h-7"/>
-          Projekte
+          Neuste Projekte
         </h2>
 
         <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           <div v-for="(project, index) in projects" :key="index">
-            <LazyProjectCard :project/>
+            <LazyProjectCard :project="project"/>
           </div>
         </div>
+
+        <div class="mt-16 text-lg text-center">
+          <Button variant="default" to="/projects" class=" hover:underline">
+            Alle Projekte entdecken
+          </Button>
+        </div>
+
       </div>
     </div>
   </section>
