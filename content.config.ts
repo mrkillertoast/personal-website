@@ -34,7 +34,7 @@ export default defineContentConfig({
 			source: 'projects/**.json',
 			type: 'data',
 			schema: z.object({
-				id: z.string(),
+				identifier: z.string(),
 				title: z.string(),
 				status: z.enum([ 'completed', 'in-progress', 'idea', 'archived', 'draft' ]).default('draft'),
 				postingDate: z.string(),
