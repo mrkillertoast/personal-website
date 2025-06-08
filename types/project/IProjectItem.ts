@@ -1,5 +1,5 @@
 export interface IProjectItem {
-	id: string;
+	identifier: string;
 	title: string;
 	status: 'completed' | 'in-progress' | 'idea' | 'archived' | 'draft';
 	postingDate: string;
