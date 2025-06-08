@@ -1,5 +1,9 @@
 {
+  "id": "balloonRideBookingPlatform",
   "title": "Balloon Ride Booking Platform",
+  "status": "in-progress",
+  "postingDate": "02.2025",
+  "tagline": "Buchungsplattform für Heissluftballonfahrten in Mexiko. Simple, responsive und mehrsprachig.",
   "description": "Buchungsplattform für Heissluftballonfahrten in Mexiko. Simple, responsive und mehrsprachig.",
   "imageUrl": "/images/projects/vole-en-globo.webp",
   "imgOverlay": "",

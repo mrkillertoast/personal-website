@@ -1,5 +1,9 @@
 {
+  "id": "bookmarkGarden",
   "title": "Bookmark Garden",
+  "status": "in-progress",
+  "postingDate": "05.2025",
+  "tagline": "Ein W.i.P. für die Organisation von Lesezeichen. (Vibe-coding Experiment)",
   "description": "Ein W.i.P. für die Organisation von Lesezeichen. (Vibe-coding Experiment)",
   "imageUrl": "",
   "imgOverlay": "",
