@@ -40,6 +40,11 @@ export default defineNuxtConfig({
 	turnstile: {
 		siteKey: process.env.TURNSTILE_SITE_KEY,
 	},
+	content: {
+		preview: {
+			api: 'https://api.nuxt.studio'
+		}
+	},
 	shadcn: {
 		/**
 		 * Prefix for all the imported component
