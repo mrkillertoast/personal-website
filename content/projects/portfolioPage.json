@@ -1,7 +1,11 @@
 {
+  "id": "portfolioPage",
   "title": "Personal Portfolio Website",
-  "description": "Diese Portfolio-Webseite, welche mit Nuxt.js und Tailwind CSS erstellt wurde.",
+  "status": "in-progress",
+  "postingDate": "03.2025",
   "imageUrl": "/images/projects/rauscher.ai.webp",
+  "tagline": "Diese Portfolio-Webseite, welche mit Nuxt.js und Tailwind CSS erstellt wurde.",
+  "description": "Diese Portfolio-Webseite, welche mit Nuxt.js und Tailwind CSS erstellt wurde.",
   "imgOverlay": "",
   "tags": [
     "Nuxt.js",
