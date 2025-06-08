@@ -49,8 +49,8 @@ const props = defineProps({
     </CardContent>
     <CardFooter class="p-4 pt-0 flex justify-between">
       <div class="blog-link">
-        <Button variant="default" size="sm" class="gap-1.5" v-if="props.project.githubUrl">
-          <a :href="props.project.githubUrl" target="_blank">Weiterlesen</a>
+        <Button variant="default" size="sm" class="gap-1.5" v-if="props.project.identifier">
+          <a :href="`/projects/${props.project.identifier}`" target="_blank">Weiterlesen</a>
         </Button>
         <div class="placeholder" v-else/>
       </div>
