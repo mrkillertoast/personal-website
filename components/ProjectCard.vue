@@ -30,9 +30,9 @@ const props = defineProps({
     </div>
     <CardHeader class="p-4">
       <CardTitle class="text-lg">{{ props.project.title }}</CardTitle>
-      <div class="flex flex-col sm:flex-row sm:items-center text-xs text-muted-foreground">
+      <div class="flex flex-row sm:items-center text-xs text-muted-foreground">
         <span>{{ props.project.postingDate }}</span>
-        <span class="hidden sm:inline mx-2">•</span>
+        <span class="inline mx-2">•</span>
         <span>{{ props.project.status }}</span>
       </div>
     </CardHeader>
