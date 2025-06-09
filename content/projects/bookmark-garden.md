@@ -1,5 +1,4 @@
 ---
-"identifier": "bookmarkGarden"
 "title": "Bookmark Garden"
 "status": "in-progress"
 "postingDate": "05.2025"

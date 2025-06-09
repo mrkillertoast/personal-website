@@ -1,5 +1,4 @@
 ---
-"identifier": "portfolioPage"
 "title": "Personal Portfolio Website"
 "status": "in-progress"
 "postingDate": "03.2025"

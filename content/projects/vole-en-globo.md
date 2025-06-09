@@ -1,5 +1,4 @@
 ---
-"identifier": "balloonRideBookingPlatform"
 "title": "Balloon Ride Booking Platform"
 "status": "in-progress"
 "postingDate": "02.2025"

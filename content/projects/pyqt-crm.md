@@ -1,5 +1,4 @@
 ---
-"identifier": "crmPyQt"
 "title": "Case Study: CRM Enhancement"
 "status": "completed"
 "postingDate": "11.2024"
