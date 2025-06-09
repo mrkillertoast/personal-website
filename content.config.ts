@@ -30,22 +30,6 @@ export default defineContentConfig({
 				order: z.number(),
 			})
 		}),
-		projects: defineCollection({
-			source: 'projects/**.json',
-			type: 'data',
-			schema: z.object({
-				identifier: z.string(),
-				title: z.string(),
-				status: z.enum([ 'completed', 'in-progress', 'idea', 'archived', 'draft' ]).default('draft'),
-				postingDate: z.string(),
-				imageUrl: z.string().optional(),
-				tagline: z.string().optional(),
-				description: z.string(),
-				tags: z.array(z.string()).optional(),
-				githubUrl: z.string().optional(),
-				liveUrl: z.string().optional(),
-			})
-		}),
 		codingSkills: defineCollection({
 			source: 'skills/code/**.json',
 			type: 'data',
@@ -106,6 +90,22 @@ export default defineContentConfig({
 				name: z.string(),
 				url: z.string(),
 				order: z.number(),
+			})
+		}),
+		projects: defineCollection({
+			type: 'page',
+			source: 'projects/**.md',
+			schema: z.object({
+				identifier: z.string(),
+				title: z.string(),
+				status: z.enum([ 'completed', 'in-progress', 'idea', 'archived', 'draft' ]).default('draft'),
+				postingDate: z.string(),
+				blogIntro: z.string().optional(),
+				imageUrl: z.string().optional(),
+				tagline: z.string().optional(),
+				tags: z.array(z.string()).optional(),
+				githubUrl: z.string().optional(),
+				liveUrl: z.string().optional(),
 			})
 		})
 	}
