@@ -1,12 +1,6 @@
 <script setup lang="ts">
-import { useAsyncData } from "#imports";
 
-const { data: projects } = await useAsyncData(() =>
-    queryCollection("projects")
-        .order("postingDate", "DESC")
-        .all()
-);
-
+const projects = await queryCollection("projects").all();
 
 import { LayoutDashboard } from "lucide-vue-next";
 </script>

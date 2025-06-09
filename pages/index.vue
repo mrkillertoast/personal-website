@@ -9,13 +9,8 @@ const { data: codingSkills } = await useAsyncData(() => queryCollection("codingS
 const { data: softSkills } = await useAsyncData(() => queryCollection("softSkills").all());
 const { data: hardSkills } = await useAsyncData(() => queryCollection("hardSkills").all());
 
-//Todo: fix type error
-const { data: projects } = await useAsyncData(() =>
-    queryCollection("projects")
-        .order("postingDate", "DESC")
-        .limit(3)
-        .all()
-);
+const projects = await queryCollection("projects").order("postingDate", "DESC").limit(3).all();
+
 const { data: languageSkills } = await useAsyncData(() => queryCollection("languageSkills").all());
 
 const sortedLanguages = computed(() => {
@@ -109,8 +104,10 @@ const sortedWorkExperiences = computed(() => {
         </div>
 
         <div class="mt-16 text-lg text-center">
-          <Button variant="default" to="/projects" class=" hover:underline">
-            Alle Projekte entdecken
+          <Button variant="default" class=" hover:underline">
+            <NuxtLink to="/projects" class="flex items-center justify-center gap-2">
+              Alle Projekte entdecken
+            </NuxtLink>
           </Button>
         </div>
 
