@@ -50,7 +50,7 @@ const props = defineProps({
     <CardFooter class="p-4 pt-0 flex justify-between">
       <div class="blog-link">
         <Button variant="default" size="sm" class="gap-1.5" v-if="props.project.identifier">
-          <a :href="`/projects/${props.project.identifier}`" target="_blank">Weiterlesen</a>
+          <a :href="`/projects/${props.project.identifier}`">Weiterlesen</a>
         </Button>
         <div class="placeholder" v-else/>
       </div>
