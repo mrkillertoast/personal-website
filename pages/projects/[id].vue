@@ -22,7 +22,7 @@ const blogPost = await queryCollection('projects').path(`/projects/${ route.para
              class="w-full h-auto rounded-lg shadow-md">
       </div>
       <div class="text-container grid col-span-2 gap-4 content-start">
-        <div class="blog-title mb-4">
+        <div class="blog-title mb-4 mt-8 md:mt-0">
           <h1 class="text-center uppercase mt-8 md:mt-0">{{ blogPost?.title }}</h1>
           <div class="flex justify-center items-center gap-4 text-xs text-muted-foreground">
             <span>{{ blogPost.postingDate }}</span>
@@ -74,6 +74,8 @@ const blogPost = await queryCollection('projects').path(`/projects/${ route.para
   @apply uppercase;
   @apply mt-0;
   @apply mb-2;
+  @apply text-wrap;
+  @apply break-words;
 }
 
 :deep(h1) {
@@ -82,6 +84,8 @@ const blogPost = await queryCollection('projects').path(`/projects/${ route.para
   @apply uppercase;
   @apply mt-8;
   @apply mb-2;
+  @apply text-wrap;
+  @apply break-words;
 }
 
 :deep(h2) {
