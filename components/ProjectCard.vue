@@ -11,6 +11,13 @@ const props = defineProps({
     required: true,
   }
 })
+
+const projectId = computed(() => {
+  if (!props.project.id) return '';
+  const lastPart = props.project.id.split('/').pop() || '';
+  return lastPart.split('.')[ 0 ];
+});
+
 </script>
 
 <template>
@@ -30,29 +37,46 @@ const props = defineProps({
     </div>
     <CardHeader class="p-4">
       <CardTitle class="text-lg">{{ props.project.title }}</CardTitle>
-      <CardDescription class="line-clamp-2 mt-1.5">{{ props.project.description }}</CardDescription>
-    </CardHeader>
-    <CardContent class="p-4 pt-0 mt-auto">
-      <div class="flex flex-wrap gap-2">
-        <span
-            v-for="(tag, tagIndex) in props.project.tags"
-            :key="tagIndex"
-            class="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-full"
-        >
-          {{ tag }}
-        </span>
+      <div class="flex flex-row sm:items-center text-xs text-muted-foreground">
+        <span>{{ props.project.postingDate }}</span>
+        <span class="inline mx-2">•</span>
+        <span>{{ props.project.status }}</span>
       </div>
+    </CardHeader>
+    <CardContent class="px-4 mb-auto">
+      <div class="line-clamp-2 text-muted-foreground text-sm">
+        <p v-if="props.project.tagline">
+          {{ props.project.tagline }}
+        </p>
+        <p v-else>
+          {{ props.project.description }}
+        </p>
+      </div>
+
     </CardContent>
     <CardFooter class="p-4 pt-0 flex justify-between">
-      <Button variant="ghost" size="sm" class="gap-1.5" v-if="props.project.githubUrl">
-        <Github class="h-4 w-4"/>
-        <a :href="props.project.githubUrl" target="_blank">Code</a>
-      </Button>
-      <div class="placeholder" v-else/>
-      <Button variant="ghost" size="sm" class="gap-1.5" v-if="props.project.liveUrl">
-        <ExternalLink class="h-4 w-4"/>
-        <a :href="props.project.liveUrl" target="_blank">Live</a>
-      </Button>
+      <div class="blog-link">
+        <Button variant="default" size="sm" class="gap-1.5" v-if="projectId">
+          <a :href="`/projects/${projectId}`">Weiterlesen</a>
+        </Button>
+        <div class="placeholder" v-else/>
+      </div>
+
+      <div class="external-links flex gap-1.5">
+        <Button variant="outline" size="sm" class="gap-1.5" v-if="props.project.githubUrl">
+          <a :href="props.project.githubUrl" target="_blank" class="flex items-center gap-1.5">
+            <Github class="w-5 h-5"/>
+          </a>
+        </Button>
+
+        <div class="placeholder" v-else/>
+        <Button variant="outline" size="sm" class="gap-1.5" v-if="props.project.liveUrl">
+          <a :href="props.project.liveUrl" target="_blank" class="flex items-center gap-1.5">
+            <ExternalLink class="h-4 w-4"/>
+            Live
+          </a>
+        </Button>
+      </div>
     </CardFooter>
   </Card>
 </template>
