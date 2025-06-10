@@ -17,7 +17,7 @@
 "liveUrl": ""
 ---
 
-# Optimierung des Kundenbeziehungsmanagements
+# Optimierung des CRM
 
 In der heutigen datengesteuerten Geschäftswelt ist ein effektives Kundenbeziehungsmanagement (CRM) unerlässlich. Doch
 selbst die fortschrittlichsten CRM-Systeme sind nur so gut wie die Daten, die sie enthalten. In einem Projekt, welches
