@@ -1,7 +1,7 @@
 ---
 "title": "Bookmark Garden"
 "status": "in-progress"
-"postingDate": "05.2025"
+"postingDate": "2025-05"
 "tagline": "Ein W.i.P. für die Organisation von Lesezeichen. (Vibe-coding Experiment)"
 "blogIntro": "Bookmark Garden ist aus einem persönlichen Bedürfnis entstanden, meine Lesezeichen effizient zu organisieren und zu verwalten. Das Experiment wurde als Vibe-Coding-Projekt gestartet um die aktuellen Coding Assistenten zu testen."
 "imageUrl": ""

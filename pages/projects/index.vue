@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-const projects = await queryCollection("projects").all();
+const projects = await queryCollection("projects").order("postingDate", "DESC").all();
 
 import { LayoutDashboard } from "lucide-vue-next";
 </script>
