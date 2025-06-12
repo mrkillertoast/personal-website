@@ -1,7 +1,7 @@
 ---
 "title": "Balloon Ride Booking Platform"
 "status": "in-progress"
-"postingDate": "02.2025"
+"postingDate": "2025-02"
 "tagline": "Buchungsplattform für Heissluftballonfahrten in Mexiko. Simple, responsive und mehrsprachig."
 "blogIntro": "Eine Buchungsplattform für Heissluftballonfahrten in Mexiko, die mit Nuxt.js und Tailwind CSS entwickelt wurde. Die Plattform ist einfach zu bedienen, responsiv und mehrsprachig. Sie bietet eine nahtlose Integration von Stripe für Zahlungen und nutzt AWS für die Speicherung von Bildern."
 "imageUrl": "/images/projects/vole-en-globo.webp"

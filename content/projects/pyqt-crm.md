@@ -1,7 +1,7 @@
 ---
 "title": "Case Study: CRM Enhancement"
 "status": "completed"
-"postingDate": "11.2024"
+"postingDate": "2024-11"
 "tagline": "Dieses PoC, zeigt mögliche KI-gestützte Erweiterungen für ein CRM-System. "
 "blogIntro": "Dieses Proof of Concept (PoC) wurde als Teil der Special Week an der Berner Fachhochschule entwickelt. Es zeigt, wie KI-gestützte Funktionen in die Datenaktualisierung eines CRM-Systems vereinfachen können, um die Effizienz und Benutzerfreundlichkeit zu verbessern. Das PoC nutzt PyQt für die GUI-Entwicklung und verschiedene KI-APIs für die Funktionalität."
 "imageUrl": "/images/projects/crm_pyqt.webp"

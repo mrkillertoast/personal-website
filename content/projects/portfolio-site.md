@@ -1,7 +1,7 @@
 ---
 "title": "Personal Portfolio Website"
 "status": "in-progress"
-"postingDate": "03.2025"
+"postingDate": "2025-03"
 "imageUrl": "/images/projects/rauscher.ai.webp"
 "tagline": "Diese Portfolio-Webseite, welche mit Nuxt.js und Tailwind CSS erstellt wurde."
 "blogIntro": "Diese Portfolie-Webseite habe ich erstellt um meine Fähigkeiten und Projekte zu präsentieren. Basierend auf den neusten Technologien wie Nuxt.js und Tailwind CSS, bildet sie die Grundlage für meinen Webauftritt. Als Teil meiner Vorstellung wird die Seite regelmässig aktualisiert und erweitert."
