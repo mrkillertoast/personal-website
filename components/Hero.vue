@@ -56,10 +56,12 @@ const props = defineProps({
           }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <!--<Button class="gap-2" v-show="props.resumeButton.display">
-            <Download class="w-4 h-4"/>
-            {{ props.resumeButton.text }}
-          </Button>-->
+          <Button class="gap-2" v-show="props.resumeButton.display">
+            <a target="_blank" :href="props.resumeButton.link" class="flex items-center gap-2">
+              <Icon name="mdi:download" class="w-4 h-4"/>
+              {{ props.resumeButton.text }}
+            </a>
+          </Button>
           <Button v-show="props.contactButton.display">
             <a :href="props.contactButton.link">
               {{ props.contactButton.text }}

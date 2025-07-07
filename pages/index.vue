@@ -31,7 +31,7 @@ const sortedWorkExperiences = computed(() => {
         :title="general?.name"
         :subtitle="general?.subtitle"
         :description="general?.description"
-        :resume-button="{ display:true, text: 'Lebenslauf herunterladen', link: '' }"
+        :resume-button="{ display:true, text: 'Lebenslauf herunterladen', link: '/docs/lebenslauf.pdf' }"
         :contactButton="{display:true, text: 'Kontaktiere mich', link: '/#contact'}"
         :images="general?.images"
     />

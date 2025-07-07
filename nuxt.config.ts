@@ -29,12 +29,16 @@ export default defineNuxtConfig({
 			]
 		},
 	},
+	routeRules: {
+		'/shared': { ssr: false }
+	},
 	runtimeConfig: {
 		plunkApiKey: process.env.PLUNK_API_KEY,
 		receiverEmail: process.env.RECEIVER_EMAIL,
 		turnstile: {
 			secretKey: process.env.TURNSTILE_SECRET_KEY
 		},
+		driveUrl: process.env.SHARED_DRIVE_FOLDER || 'https://rauscher.ai',
 		public: {}
 	},
 	turnstile: {
